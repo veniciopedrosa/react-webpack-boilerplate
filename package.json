@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1"
   },
@@ -31,8 +35,17 @@
     "@babel/preset-react": "^7.0.0",
     "@hot-loader/react-dom": "^16.9.0",
     "babel-loader": "^8.0.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "react-addons-test-utils": "^15.6.2",
     "react-hot-loader": "4.12.14",
+    "react-test-renderer": "^16.10.1",
     "webpack": "4.41.0",
     "webpack-dev-server": "^3.8.1"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ]
   }
 }
